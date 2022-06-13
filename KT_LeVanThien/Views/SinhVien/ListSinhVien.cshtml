@@ -1,0 +1,36 @@
+﻿@model IEnumerable<KT_LeVanThien.Models.SinhVien>
+@{
+    ViewBag.Title = "ListSach";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>THÔNG TIN SINH VIEN</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th> Mã sinh vien </th>
+        <th> Tên sinh viên</th>
+        <th> gioi tinh  </th>
+        <th> ngay sinh </th>
+        <th> hinh </th>
+        <th> mã ngành</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@Html.DisplayFor(modelItem => item.MaSV)</td>
+    <td>@Html.DisplayFor(modelItem => item.HoTen)</td>
+    <td>@Html.DisplayFor(modelItem => item.GioiTinh)</td>
+    <td>@Html.DisplayFor(modelItem => item.NgaySinh)</td>
+    <td><img src="@item.Hinh"  width="100px" /></td>
+    <td>@Html.DisplayFor(modelItem => item.MaNganh)</td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaSV }) |
+        @Html.ActionLink("Detail", "Detail", new { id = item.MaSV }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaSV })
+    </td>
+</tr>
+    }
+</table>
