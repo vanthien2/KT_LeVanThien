@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Detail</h2>
+<h2> THÔNG TIN CHI TIẾT </h2>
 
 <div>
     <h4>SinhVien</h4>
@@ -41,6 +41,7 @@
 
         <dd>
             @Html.DisplayFor(model => model.Hinh)
+            <img src="@Html.DisplayFor(model => model.Hinh)" width="100px" />
         </dd>
 
         <dt>

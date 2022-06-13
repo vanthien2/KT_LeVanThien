@@ -81,7 +81,7 @@ namespace KT_LeVanThien.Controllers
                 s.GioiTinh = E_GioiTinh.ToString();
                 s.NgaySinh = E_NgaySinh;
                 s.MaNganh = E_MaNganh.ToString();
-                UpdateModel(E_SinhVien);
+                UpdateModel(E_sinhvien);
                 data.SubmitChanges();
                 return RedirectToAction("ListSinhVien");
             }
